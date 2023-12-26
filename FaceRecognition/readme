@@ -1,0 +1,33 @@
+
+How to setup the environment:
+--------------------------------------------
+1. Install conda for linux on the machine
+2. Create conda env
+    conda create -n FacePay python==3.7.9
+
+    Now, please activate this env using
+    conda activate FacePay
+3. Run the below commands in the same manner
+    conda install -c conda-forge dlib
+    pip install -r requirements.txt
+
+How to use the service:
+--------------------------------------------
+1. Run the python app file
+    python app.py
+    or
+    nohup python app.py
+
+2. Note:-
+    It is recommended to use good quality images in the database or on the request image.
+    It is better to not have images greater than 1 mb of data as it slows down the request
+
+Directory structure:
+--------------------------------------------
+dataset - nothing a database that gets verified on every request
+demo - code files :- Note: not to be edited or deleted
+images - code dependant dir :- Note: not to be edited or deleted
+log_history - logs for every request is generated :- Note: Directory not to be deleted
+model_weights - face recognition models :- Note: not to be edited or deleted
+retinaface - face recognition dependent code files :- Note: not to be edited or deleted
+test_samples - sample test images which can be used when sending request via postman
